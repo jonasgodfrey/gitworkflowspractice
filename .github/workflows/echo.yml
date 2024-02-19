@@ -1,0 +1,13 @@
+name: Echo Your Name
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  echo_name:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Echo Your Name
+      run: echo "Godfrey"

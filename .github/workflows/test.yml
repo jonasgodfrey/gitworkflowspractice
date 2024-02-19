@@ -1,0 +1,26 @@
+name: Run Tests and Create Artifact
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test_and_create_artifact:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install Dependencies
+      run: npm install
+
+    - name: Run Jest tests
+      run: npm test
+
+    - name: Create Artifact
+      run: |
+        mkdir dist
+        echo "This is a sample artifact file." > dist/artifact.txt
+      artifacts:
+        path: dist
