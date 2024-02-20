@@ -1,0 +1,19 @@
+{
+  "devDependencies": {
+    "@babel/core": "^7.23.9",
+    "@babel/preset-env": "^7.23.9",
+    "babel-jest": "^29.7.0",
+    "eslint": "^8.56.0",
+    "husky": "^9.0.10"
+  },
+  "scripts": {
+    "lint": "npx eslint lab1/*.js",
+    "style": "prettier --check lab1/calculator.js",
+    "format": "prettier --write lab1/calculator.js",
+    "test": "jest lab1/calculator.test.js",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "jest": "^29.7.0"
+  }
+}
